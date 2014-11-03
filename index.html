@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>New project</title>
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/project.css"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="login">
+                <header>
+                    <div class="grid-10">
+                        <div class="span-5">
+                            <div class="socials">
+                                <a class="icon fb" href="#"></a>
+                                <a class="icon gp" href="#"></a>
+                                <a class="icon tw" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="span-5 text-right">
+                            <a href="#" class="color-white link-dashed">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                </header>
+                
+                <form action="#">
+                    <input type="text" name="email" class="width-100" placeholder="Электронная почта" tabindex="1" />
+                    <input type="text" name="email" class="width-100" placeholder="Пароль" tabindex="2" />
+                    
+                    <div class="grid-10">
+                        <div class="span-5">
+                            <button type="submit" class="button flat button-go">Войти</button>
+                        </div>
+                        <div class="span-5 text-right">
+                            <div class="form-link">
+                                <a href="#" class="link-dashed">Напомнить пароль</a>
+                            </div>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="js/quodo.animate.js"></script>
+
+        <script>
+        $(function(){
+            $('.login').QAnimate('spawn', {
+                duration: 500
+            });
+        });
+        </script>
+    </body>
+</html>

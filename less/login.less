@@ -1,0 +1,69 @@
+.login {
+	@width: 500px;
+
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	width: @width;
+	margin-left: -@width / 2;
+
+	.box-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+
+	header {
+		padding: 25px 40px;
+		background: @dark-bg;
+
+		.socials {
+			.icon {
+				position: relative;
+				width: 40px;
+				height: 40px;
+				display: block;
+				float: left;
+				margin-right: 15px;
+
+				&:after {
+					display: block;
+					content: '';
+					height: 40px;
+					width: 40px;
+					position: absolute;
+					background-size: 100% 100%;
+    				background-repeat: no-repeat;
+				}
+			}
+
+			.fb {
+				background-image: url(../img/icons/facebook.svg);
+			}
+
+			.tw {
+				background-image: url(../img/icons/twitter.svg);
+			}
+
+			.gp {
+				background-image: url(../img/icons/google_plus.svg);
+			}
+		}
+	}
+
+	form {
+		padding: 40px;
+
+		input[type="text"] {
+			margin-bottom: 40px;
+			padding: 17px 20px;
+			font-size: 1.25em;
+		}
+
+		button {
+			padding: 19px 20px;
+			font-size: 1.25em;
+			min-width: 200px;
+		}
+
+		.form-link {
+			margin-top: 15px;
+		}
+	}
+}

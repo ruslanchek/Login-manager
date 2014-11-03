@@ -1044,7 +1044,7 @@ textarea {
   outline: none;
   border: none;
   background: #fff;
-  padding: 10px 20px;
+  padding: 10px 18px;
   font-size: 1em;
   color: #37406b;
   border: 2px solid #dddfe0;
@@ -1561,12 +1561,14 @@ a.link-underlined.color-blue-light:hover:after {
     margin-bottom: 1.5em;
   }
 }
-.login {
-  position: absolute;
-  top: 20%;
-  left: 50%;
+.login-wrap {
   width: 500px;
+  top: 15%;
+  left: 50%;
   margin-left: -250px;
+  position: absolute;
+}
+.login {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 .login header {
@@ -1614,6 +1616,42 @@ a.link-underlined.color-blue-light:hover:after {
 }
 .login form .text-right {
   margin-top: 15px;
+}
+.flip-container {
+  -webkit-perspective: 1100px;
+          perspective: 1100px;
+  height: 425px;
+}
+.flip-container .front {
+  height: 425px;
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.flip-container .back {
+  height: 325px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.flip-container .front,
+.flip-container .back {
+  width: 500px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.flip-container.rotate .flipper {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.flip-container .flipper {
+  -webkit-transition: 0.6s;
+          transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
 }
 /* Your project styles goes here */
 /*# sourceMappingURL=project.css.map */

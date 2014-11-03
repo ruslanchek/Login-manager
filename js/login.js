@@ -8,4 +8,12 @@ $(function(){
 			background: '#37404C'
 		});
 	});
+
+	$('#go-restore-password').on('click', function(){
+		$('.flip-container').addClass('rotate');
+	});
+
+	$('#go-login').on('click', function(){
+		$('.flip-container').removeClass('rotate');
+	});
 });

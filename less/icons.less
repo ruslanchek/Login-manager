@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-times:before {
+  content: "\f00d";
+}
 .icon-twitter-square:before {
   content: "\f081";
 }
@@ -31,4 +34,25 @@
 }
 .icon-google-plus-square:before {
   content: "\f0d4";
+}
+.icon-ruble:before {
+  content: "\f158";
+}
+
+
+.badge-payed,
+.badge-payless {
+  background: @color-green-light;
+  color: #fff !important;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.875em;
+  font-size: 1.2em;
+  display: block;
+  text-align: center;
+}
+
+.badge-payless {
+  background: @color-grey-light;
 }

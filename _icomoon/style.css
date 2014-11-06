@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'manager';
-	src:url('fonts/manager.eot?-hp70sh');
-	src:url('fonts/manager.eot?#iefix-hp70sh') format('embedded-opentype'),
-		url('fonts/manager.woff?-hp70sh') format('woff'),
-		url('fonts/manager.ttf?-hp70sh') format('truetype'),
-		url('fonts/manager.svg?-hp70sh#manager') format('svg');
+	src:url('fonts/manager.eot?v03lh2');
+	src:url('fonts/manager.eot?#iefixv03lh2') format('embedded-opentype'),
+		url('fonts/manager.woff?v03lh2') format('woff'),
+		url('fonts/manager.ttf?v03lh2') format('truetype'),
+		url('fonts/manager.svg?v03lh2#manager') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-times:before {
+	content: "\f00d";
+}
 .icon-twitter-square:before {
 	content: "\f081";
 }
@@ -31,4 +34,7 @@
 }
 .icon-google-plus-square:before {
 	content: "\f0d4";
+}
+.icon-ruble:before {
+	content: "\f158";
 }

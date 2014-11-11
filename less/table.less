@@ -7,9 +7,18 @@
 
   .row {
     .clearfix();
+    border-bottom: 1px solid @elements-border-color;
   }
 
   .head {
     font-weight: bold;
+  }
+
+  .body {
+    .row {
+      &:hover {
+        background: @elements-bg-color-light + 25;
+      }
+    }
   }
 }

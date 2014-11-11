@@ -1,0 +1,7 @@
+var Main = function(){
+	
+};
+
+$(function(){
+	
+});

@@ -1577,7 +1577,7 @@ a.link-underlined.color-base:hover:after {
 }
 .badge-payed,
 .badge-payless {
-  background: #6bd1b3;
+  background: #ffcb00;
   color: #fff !important;
   border-radius: 1em;
   width: 1.5em;
@@ -1586,9 +1586,11 @@ a.link-underlined.color-base:hover:after {
   font-size: 1.2em;
   display: block;
   text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.075);
 }
 .badge-payless {
-  background: #b4bdc5;
+  background: #dce5ed;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 .animated {
   -webkit-animation-duration: 500ms;

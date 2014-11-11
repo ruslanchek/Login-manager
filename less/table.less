@@ -3,6 +3,7 @@
     float: left;
     padding: 10px 15px;
     .box-sizing();
+    position: relative;
   }
 
   .row {
@@ -17,8 +18,12 @@
   .body {
     .row {
       &:hover {
-        background: @elements-bg-color-light + 25;
+        background: @elements-bg-color-light-hover;
       }
     }
+  }
+
+  .delete {
+
   }
 }

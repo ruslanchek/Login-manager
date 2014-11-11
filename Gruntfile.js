@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         },
         watch: {
             less: {
-                files: ['less/*.less'],
+                files: ['less/*.less', '*.html', 'js/*.js'],
                 tasks: ['less'],
                 options: {
                     livereload: true

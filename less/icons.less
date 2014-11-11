@@ -42,19 +42,18 @@
 
 .badge-payed,
 .badge-not-payed {
-  background: @color-yellow;
-  color: #fff !important;
+  color: #ffcb00;
   border-radius: 1em;
   width: 1.5em;
   height: 1.5em;
-  line-height: 1.75em;
+  line-height: 1.625em;
   font-size: 1.2em;
   display: block;
   text-align: center;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+  border: 1px solid #ffcb00;
 }
 
 .badge-not-payed {
-  background: @color-grey-light + 40;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+  border: 1px solid @color-grey-light + 40;
+  color: @color-grey-light + 30;
 }

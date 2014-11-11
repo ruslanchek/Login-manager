@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         less: {
-            development: {
+            dev: {
                 options: {
                     paths: ["less"]
                 },
@@ -11,18 +11,25 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            less: {
+            dev: {
                 files: ['less/*.less', '*.html', 'js/*.js'],
-                tasks: ['less'],
+                tasks: ['less', 'autoprefixer'],
                 options: {
                     livereload: true
                 }
+            }
+        },
+        autoprefixer: {
+            dev: {
+                src: 'css/project.css',
+                dest: 'css/project.css'
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
-    grunt.registerTask('default', ['less', 'watch']);
+    grunt.registerTask('default', ['less', 'autoprefixer', 'watch']);
 };

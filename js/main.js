@@ -32,10 +32,12 @@ t.setContentData([
         title: '002345',
         date: new Date(),
         payDate: new Date(),
-        price: 1000000.00,
+        price: 10000020.01,
+        items: 101,
         contragent: {
             name: 'Хуй',
-            id: 1
+            id: 1,
+            type: 2
         }
     },
     {
@@ -43,10 +45,12 @@ t.setContentData([
         title: '002345',
         date: new Date(),
         payDate: new Date(),
-        price: 1000000,
+        price: 100000010,
+        items: 103,
         contragent: {
-            name: 'Хуй',
-            id: 1
+            name: 'Нааа',
+            id: 1,
+            type: 1
         }
     }
 ]);

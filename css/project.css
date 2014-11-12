@@ -852,6 +852,18 @@ ol li {
 .small {
   font-size: 0.8em;
 }
+.block {
+  display: block;
+}
+.center {
+  margin: 0 auto;
+}
+.left {
+  margin: 0 auto 0 0;
+}
+.right {
+  margin: 0 0 0 auto;
+}
 .font-thin {
   font-weight: 100;
 }
@@ -1953,7 +1965,9 @@ html {
   height: 100%;
 }
 .limiter {
-  width: 960px;
+  width: 80%;
+  min-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .layout {

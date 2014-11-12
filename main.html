@@ -73,10 +73,12 @@
                         </div>
                         <div class="cell width-25">
                             {{{helpers.price(price)}}}
-                            <div class="small color-grey-light">12 позиций</div>
+                            <div class="small color-grey-light">{{items}} {{helpers.plural(items, 'позиция', 'позиции', 'позиций')}}</div>
                         </div>
                         <div class="cell width-35">
-                            <a class="link-underlined" href="#">ООО &laquo;Трансинжнефтьстрой&raquo;</a>
+                            {{#contragent}}
+                            <a class="link-underlined" href="/contragents/{{id}}">{{helpers.companyType(type)}} &laquo;{{name}}&raquo;</a>
+                            {{/contragent}}
                         </div>
                         <div class="cell width-5">
                             <a class="link-icon color-red delete" title="Удалить" href="#"><i class="icon-times"></i></a>

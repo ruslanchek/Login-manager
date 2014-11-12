@@ -16,7 +16,6 @@ td {
 *:before,
 *:after {
   -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -1028,7 +1027,6 @@ a.link-underlined:active:after {
   float: left;
   padding: 10px 15px;
   -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
 }
@@ -1056,7 +1054,6 @@ a.link-underlined:active:after {
   border-bottom: 1px solid #dddfe0;
   margin-bottom: 2em;
   -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .nav-horizontal a,
@@ -1066,7 +1063,6 @@ a.link-underlined:active:after {
   color: #222941;
   text-decoration: none;
   -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 50ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
           transition: all 50ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -1477,7 +1473,7 @@ label {
   color: #38c8c4;
 }
 .color-green-light {
-  color: #6bd1b3;
+  color: #42d2ce;
 }
 .color-red {
   color: #f0644d;
@@ -1513,7 +1509,7 @@ label {
   background-color: #38c8c4;
 }
 .background-green-light {
-  background-color: #6bd1b3;
+  background-color: #42d2ce;
 }
 .background-red {
   background-color: #f0644d;
@@ -1636,22 +1632,22 @@ a.link-underlined.color-green:hover:after {
 a.color-green-light,
 a.link-dashed.color-green-light,
 a.link-underlined.color-green-light {
-  color: #6bd1b3;
+  color: #42d2ce;
 }
 a.color-green-light:after,
 a.link-dashed.color-green-light:after,
 a.link-underlined.color-green-light:after {
-  border-bottom-color: #6bd1b3;
+  border-bottom-color: #42d2ce;
 }
 a.color-green-light:hover,
 a.link-dashed.color-green-light:hover,
 a.link-underlined.color-green-light:hover {
-  color: #89efd1;
+  color: #60f0ec;
 }
 a.color-green-light:hover:after,
 a.link-dashed.color-green-light:hover:after,
 a.link-underlined.color-green-light:hover:after {
-  border-bottom-color: #89efd1;
+  border-bottom-color: #60f0ec;
 }
 a.color-red,
 a.link-dashed.color-red,
@@ -1965,9 +1961,7 @@ html {
   height: 100%;
 }
 .limiter {
-  width: 80%;
-  min-width: 960px;
-  max-width: 1200px;
+  width: 960px;
   margin: 0 auto;
 }
 .layout {
@@ -2034,4 +2028,3 @@ html {
   margin-top: 15px;
 }
 /* Your project styles goes here */
-/*# sourceMappingURL=project.css.map */

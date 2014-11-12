@@ -1,31 +1,42 @@
 var Helpers = function(){
-	numeral.language('ru', {
-		delimiters: {
-			thousands: ' ',
-			decimal: ','
-		},
-		abbreviations: {
-			thousand: 'тыс',
-			million: 'млн',
-			billion: 'млд',
-			trillion: 'трн'
-		},
-		ordinal : function (number) {
-			return number === 1 ? 'er' : 'ème';
-		},
-		currency: {
-			symbol: '<span class="rub">₽</span>'
-		}
-	});
+	function initNumeral(){
+		numeral.language('ru', {
+			delimiters: {
+				thousands: ' ',
+				decimal: ','
+			},
+			abbreviations: {
+				thousand: 'тыс',
+				million: 'млн',
+				billion: 'млд',
+				trillion: 'трн'
+			},
+			currency: {
+				symbol: '<span class="rub">₽</span>'
+			}
+		});
 
-	numeral.language('ru');
+		numeral.language('ru');
+	}
 
-	this.price = function(str){
-		return numeral(str).format('0,0[.0] $');
+	function initMoment(){
+		moment.locale('ru');
+	}
+
+	initNumeral();
+	initMoment();
+
+
+	this.price = function(float){
+		return numeral(float).format('0,0.[00] $');
 	};
 
-	this.date = function(str){
-		return moment(str).format("MMM Do YY");
+	this.date = function(date){
+		return moment(date).format('d MMMM YYYY', 'accusative');
+	};
+
+	this.dateFrom = function(date){
+		return moment(date).fromNow();
 	};
 
 	this.companyType = function(id){

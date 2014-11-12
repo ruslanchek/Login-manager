@@ -40,14 +40,20 @@
                 <div class="head">
                     <div class="row">
                         <div class="cell width-5"></div>
-                        <div class="cell width-30">Наименование</div>
-                        <div class="cell width-25">Сумма заказа</div>
-                        <div class="cell width-35">Контрагент</div>
+                        <div class="cell width-34">
+                            <a on-click="sort:title" href="#">Наименование</a>
+                        </div>
+                        <div class="cell width-21">
+                            <a on-click="sort:price" href="#">Сумма заказа</a>
+                        </div>
+                        <div class="cell width-35">
+                            <a on-click="sort:contragent.name" href="#">Контрагент</a>
+                        </div>
                         <div class="cell width-5"></div>
                     </div>
                 </div>
                 <div class="body">
-                    {{#rows}}
+                    {{#each sort( rows, sortColumn ) :num}}
                     <div class="row">
                         <div class="cell width-5">
                             {{#payed}}
@@ -58,20 +64,20 @@
                                 <span class="link-icon badge-payed badge-not-payed" title="Не оплачен"><i class="icon-ruble"></i></span>
                             {{/payed}}
                         </div>
-                        <div class="cell width-30">
+                        <div class="cell width-34">
                             <a class="link-underlined" href="#">Счет №{{title}}</a>&nbsp;<span class="color-grey">от {{helpers.date(date)}}</span>
 
                             {{#payed}}
                                 <div class="small color-green-light">
-                                    Оплачен
+                                    Оплачен <span class="color-grey-light">{{helpers.dateFrom(payDate)}}</span>
                                 </div>
                             {{/payed}}
 
                             {{^payed}}
-                                <div class="small color-grey-light">Оплата до {{helpers.date(payDate)}}</div>
+                                <div class="small color-grey-light">Оплата до {{helpers.date(payTill)}}</div>
                             {{/payed}}
                         </div>
-                        <div class="cell width-25">
+                        <div class="cell width-21">
                             {{{helpers.price(price)}}}
                             <div class="small color-grey-light">{{items}} {{helpers.plural(items, 'позиция', 'позиции', 'позиций')}}</div>
                         </div>
@@ -84,7 +90,7 @@
                             <a class="link-icon color-red delete" title="Удалить" href="#"><i class="icon-times"></i></a>
                         </div>
                     </div>
-                    {{/rows}}
+                    {{/each}}
                 </div>
             </div>
         </script>
@@ -93,7 +99,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
         <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
-        <script src="http://momentjs.com/downloads/moment.min.js"></script>
+        <script src="js/moment.js"></script>
         <script src="js/quodo.animate.js"></script>
         <script src="js/helpers.js"></script>
         <script src="js/main.js"></script>

@@ -4,7 +4,7 @@ var Table = function(options){
 
     this.options = $.extend({
         el: '#outlet',
-        template: '#template-table'
+        template: '#template-table-invoices'
     }, options);
 
     var ractive = new Ractive({
@@ -12,13 +12,7 @@ var Table = function(options){
         template: this.options.template,
         data: {
             rows: rows,
-            convertPrice: function(str){
-                return numeral(str).format('00,[00]') + ' <span class="rub">&#8399;</span>';
-            },
-            convertDate: function(str){
-                moment.locale('ru');
-                return moment(str).format("MMM Do YY");
-            }
+            helpers: new Helpers()
         }
     });
 
@@ -29,7 +23,7 @@ var Table = function(options){
 
 var t = new Table({
     el: '#outlet',
-    template: '#template-table'
+    template: '#template-table-invoices'
 });
 
 t.setContentData([
